@@ -4,26 +4,24 @@ let board = document.querySelector('.board');
 let currentPlayer = 'red';
 let playerWinner = document.getElementById('winner');
 let button = document.getElementById('btn');
-let hasWinner = false;
+let Winner = false;
 
 //create board
-function creategame() {
+function createGame() {
   for (let i = 0; i < rows; ++i) {
     let row = document.createElement('div');
     row.className = 'row';
-
     for (let j = 0; j < columns; ++j) {
       let cell = document.createElement('div');
       cell.classList.add('cell');
       cell.dataset.column = j;
       row.appendChild(cell);
     }
-
     board.appendChild(row);
   }
 }
 
-creategame();
+createGame();
 
 function checkWin(cells, currentPlayer) {
   // Check row
@@ -85,7 +83,7 @@ let cells = document.querySelectorAll('.cell');
 
 cells.forEach((cell) => {
   cell.addEventListener('click', (event) => {
-    if (hasWinner) {
+    if (Winner) {
       return;
     }
     let columnIndex = parseInt(event.target.dataset.column);
@@ -97,7 +95,7 @@ cells.forEach((cell) => {
 
         if (checkWin(cells, currentPlayer)) {
           playerWinner.innerHTML = currentPlayer.toUpperCase() + ' Wins!';
-          hasWinner = true;
+          Winner = true;
         }
         currentPlayer = currentPlayer === 'red' ? 'black' : 'red';
         break;
