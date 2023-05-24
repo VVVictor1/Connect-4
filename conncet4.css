@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    height: 30rem;
+    width: 35rem;
+    margin-top: 5rem;
+    
+}
+
+
+.board {
+    
+    background-color: lightblue;
+    height: 21rem;
+    width: 27rem;
+    margin-top: 55px;
+   
+  }
+  
+  .row {
+    justify-content: center;
+  }
+  
+  .cell {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    margin-top: 100px;
+    margin: 5px;
+  }
+  
+  #btn{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+    
+  }
+  h1{
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+  }
